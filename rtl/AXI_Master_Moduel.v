@@ -87,11 +87,11 @@ module AXI_Master_Moduel#(
 
 /***************function**************/
 function integer clogb2 (input integer bit_depth);              
-	  begin                                                           
-	    for(clogb2=0; bit_depth>0; clogb2=clogb2+1)                   
-	      bit_depth = bit_depth >> 1;                                 
-	    end                                                           
-	  endfunction 
+	begin                                                           
+	  for(clogb2=0; bit_depth>0; clogb2=clogb2+1)                   
+	    bit_depth = bit_depth >> 1;                                 
+	end                                                           
+endfunction 
 /***************parameter*************/
 localparam                              P_DATA_BYTE = C_M_AXI_DATA_WIDTH/8;
 localparam                              P_M_AXI_SIZE = clogb2((C_M_AXI_DATA_WIDTH/8) - 1);
